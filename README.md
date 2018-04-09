@@ -28,27 +28,57 @@ Data Science Immersive, General Assembly, 10 April 2018
 | [.gitignore](./.gitignore) | gitignore file |
 
 ---
-## The Problem
+## The Problem: Combatting Individual-Level Food Waste
 
+When I plan to cook, I select a recipe and plan my grocery shopping based on that. Once I prepare the recipe, I often find that the recipe yields leftover _raw_ ingredients. The packaged raw ingredients don't fit perfectly with what I have planned. But this opens a new problem: I don't have a use for the leftovers. So they rot.
 
+I sought to build a recipe recommendation engine: based on the recipe that I intended to prepare, I wanted to identify other recipes that bore a substantial (but not exact) similarity (based on the ingredient list) to my intended meal, so that I could reuse the leftover raw ingredients in another application.
 
 ---
 
 ## Technical Documentation
 
-The motivating 
+### Data
+
+I used a recipe corpus (a cookbook) from Luis Herranz (http://lherranz.org/datasets/), containing about 28,000 recipes acquired from Yummly. Apart from the metadat about the recipes, this was a convenient choice because each recipe's ingredients were stored as a list.
+
+### Basics
+
+While this began as a recommendation engine problem, it quickly devolved into a natural language processing one and a recursive one at that.
+
+The data can be understood as follows:
+
+- A cookbook (corpus) is a collection of recipes;
+
+- A recipe (document) is a collection of ingredients;
+
+- An ingredient (word) is the fundamental building block, and our unit of comparison.
+
+### Algorithm
+
+The essential structure of the algorithm is as follows:
+
+- From our cookbook, distill each recipe down into just its ingredients.
+
+- Each recipe's ingredients will need to be stripped down to its core, so that they can be compared:
+
+  - Remove quantities;
+  - Remove units and their abbreviations;
+  - Create a custom stopword dictionary for culinary preparation words;
+  - Reduce the dimensionality of the ingredients by removing ingredients commonly found in a kitchen; and
+  - Further reduce the dimensionality of the ingredients by clustering similiar, substitutable ingredients.
+
+- At this point, each recipe will be a vector of clusters, instead of a vector of ingredients.
+
+- The recommendation engine, using cosine similarity, will measure the angular distance between each ingredient vector to 
 
 ---
 
-Technical Report
-You can imagine your technical report as a primer or recipe on how to replicate your modeling process. Length and format are up to you. At a minimum, your technical report should contain:
+## Future Extensions
 
-How you acquired your data (including any sampling that you did)
-How the data should be transformed, including justifying your choices
-How you operationalized your outcome variable, including your justification
-Your choice of model and any hyperparameters, including what metric or metrics you use to determine a successful model
-Any future deployment strategies, additions of data, or modeling techniques you have yet to try
-In other words, another Data Scientist should be able to take your techncial report and, without seeing your code, come up with a similar model.
 
-Code
-Your code may be structured in any way you choose (though obviously, efficient and well-written code is preferred!) At this point in the process you should have your models finalized for the most part, this is to confirm your code is at a good point.
+
+
+
+
+- 
