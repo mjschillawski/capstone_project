@@ -20,6 +20,7 @@ Data Science Immersive, General Assembly, 10 April 2018
 |:---------:|:-----------:|
 | [README](./README.md) | Project documentation |
 | [LICENSE](./LICENSE) | License |
+| [capstone.ipynb](https://github.com/mjschillawski/capstone_project/blob/master/capstone.ipynb) | Recipe Recommender System notebook |
 | [00_EDA.ipynb](https://github.com/mjschillawski/capstone_project/blob/master/00_EDA.ipynb) | Recipe Recommender System |
 | [recommender.py]() |  |
 | [Presentation Deck](https://docs.google.com/presentation/d/1u8gIq1u46CyaZ49r7KACPhh2l_XackVf73mayR2G110/edit?usp=sharing) | Slide deck |
@@ -70,15 +71,16 @@ The essential structure of the algorithm is as follows:
 
 - At this point, each recipe will be a vector of clusters, instead of a vector of ingredients.
 
-- The recommendation engine, using cosine similarity, will measure the angular distance between each ingredient vector to 
+- The recommendation engine, using cosine similarity, will measure the angular distance between each ingredient vector. Recipes that share more ingredients will have higher similarity scores. 
+
+However, the eventual recommendation **should not be** the recipe(s) with the highest similarity. Here's the intuition: a recipe that shares 100% ingredient similarity with the target recipe is likely the same recipe. The nature of many recipe websites is to have many variations of the same recipe. While we have implemented some degree of freedom by reducing the dimensionality of the ingredients (subtracting common, baseline pantry ingredients and clustering ingredients), recipes with perfect similiarity are too similar to be a useful recommendation.
 
 ---
 
 ## Future Extensions
 
+The kitchen is one of the last places in the home where data has yet to penetrate. At this point, bluetooth and wifi-connected kitchen appliances are novelties more than integrated solutions in the kitchen workflow.
 
+This recipe recommender system, to help minimize home kitchen food waste, is the first thrust into this. Future development includes more robust pantry management. This early version relied on a static inventory of a pantry; future iterations will include dynamic pantry management, subtracting ingredients as they are consumed in prepared recipes.
 
-
-
-
-- 
+This leads naturally into predictive grocery lists, advising the user when to replace pantry staples as they are consumed in cooking. From there, text-recognition for grocery receipts or integration into online grocery-ordering services would be able to provide real-time monitoring and inventory of the pantry. Further possibilities include integration into fitness and nutrition tracking apps, since, at that point, this reporting and recommendation suite would know what food options are available and when they are consumed.
