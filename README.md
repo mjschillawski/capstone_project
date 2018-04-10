@@ -21,11 +21,13 @@ Data Science Immersive, General Assembly, 10 April 2018
 | [README](./README.md) | Project documentation |
 | [LICENSE](./LICENSE) | License |
 | [capstone.ipynb](https://github.com/mjschillawski/capstone_project/blob/master/capstone.ipynb) | Recipe Recommender System notebook |
-| [00_EDA.ipynb](https://github.com/mjschillawski/capstone_project/blob/master/00_EDA.ipynb) | Recipe Recommender System |
-| [recommender.py]() |  |
-| [Presentation Deck](https://docs.google.com/presentation/d/1u8gIq1u46CyaZ49r7KACPhh2l_XackVf73mayR2G110/edit?usp=sharing) | Slide deck |
-| [assets](https://github.com/mjschillawski/capstone_project/tree/master/assets) | Supporting materials, working files and temporary staging |
-| [presentation]() | Slide deck images |
+| [recommender.py](https://github.com/mjschillawski/capstone_project/blob/master/recommender.py) | Stand-alone Recommender Function|
+| [Recommender_Demo]() | Recommender Demonstration Notebook|
+| [EDA_and_ScratchPad.ipynb](https://github.com/mjschillawski/capstone_project/blob/master/00_EDA.ipynb) | Exploration and Draft Functions |
+| [Presentation Deck]() | Slide deck |
+| [eval_words_log.txt](https://github.com/mjschillawski/capstone_project/blob/master/eval_words_log.txt) | Stop Word Evaluation Log|
+| [assets](https://github.com/mjschillawski/capstone_project/tree/master/assets) | Supporting materials, working files, pickles, and temporary staging |
+| [images](https://github.com/mjschillawski/capstone_project/tree/master/images) | Slide deck images |
 | [.gitignore](./.gitignore) | gitignore file |
 
 ---
