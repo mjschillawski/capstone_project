@@ -22,12 +22,12 @@ Data Science Immersive, General Assembly, 10 April 2018
 | [LICENSE](./LICENSE) | License |
 | [capstone.ipynb](https://github.com/mjschillawski/capstone_project/blob/master/capstone.ipynb) | Recipe Recommender System notebook |
 | [recommender.py](https://github.com/mjschillawski/capstone_project/blob/master/recommender.py) | Stand-alone Recommender Function|
-| [Recommender_Demo]() | Recommender Demonstration Notebook|
+| [Recommender_Demonstration](https://github.com/mjschillawski/capstone_project/blob/master/Recommender_Demonstration.ipynb) | Recommender Demonstration Notebook|
 | [EDA_and_ScratchPad.ipynb](https://github.com/mjschillawski/capstone_project/blob/master/00_EDA.ipynb) | Exploration and Draft Functions |
-| [Presentation Deck]() | Slide deck |
+| [capstone_presentation.pdf](https://github.com/mjschillawski/capstone_project/blob/master/capstone_presentation.pdf) | Slide deck |
 | [eval_words_log.txt](https://github.com/mjschillawski/capstone_project/blob/master/eval_words_log.txt) | Stop Word Evaluation Log|
 | [assets](https://github.com/mjschillawski/capstone_project/tree/master/assets) | Supporting materials, working files, pickles, and temporary staging |
-| [images](https://github.com/mjschillawski/capstone_project/tree/master/images) | Slide deck images |
+| [presentation](https://github.com/mjschillawski/capstone_project/tree/master/presentation) | Slide deck images |
 | [.gitignore](./.gitignore) | gitignore file |
 
 ---
